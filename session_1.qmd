@@ -1,0 +1,644 @@
+---
+format: 
+  revealjs:
+    theme: [serif, custom.scss]
+    scrollable: true
+    logo: media/chop_arcus_initiative_logo.png
+    footer: Arcus Education 
+    css: styles.css
+---
+
+These slides available at: <>
+
+-   Slides with animated gifs may need to be "reloaded" in the browser to run
+
+-   Use keyboard arrow keys to
+    -   advance ( → ) and
+    -   go back ( ← )
+-   Type "s" to see speaker notes
+-   Type "?" to see other keyboard shortcuts
+
+::: notes
+As we prepare to get started, I'd like to encourage you to open these slides on your own browser, so you will have them available to refer to later.  There are also a number of links you may want to click on.  I'll copy paste that URL, where the slide deck is located, into chat, so everyone has it.
+
+This first slide is just to help you navigate this slide deck if you look at these slides on your own!
+:::
+
+
+## About Arcus / Your Presenter {.smaller}
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="60%"}
+
+Arcus is an initiative by the Research Institute aimed at promoting data discovery and reuse and increasing research reproducibility. 
+
+* Arcus app: <https://arcus.chop.edu>
+* Arcus Sharepoint site: <https://chop365.sharepoint.com/sites/Arcus>
+
+Among the many teams in Arcus, I represent Arcus Education!
+
+![](media/arcus_website.png){.two-thirds .bordered}
+:::
+
+::: {.column .small-text width="40%"}
+![](media/arcus_research_data_lifecycle.png)
+:::
+
+:::
+
+::: notes
+
+Hi everyone, and welcome to our session today!  I'd like to begin by briefly introducing myself and introducing Arcus, for those of you who may not be familiar with us.  My name is ______ (add pronouns here if you want), and I'll be leading today's session.
+
+Arcus is an initiative by the Research Institute aimed at promoting data discovery and reuse and increasing research reproducibility throughout the research lifecycle, as you can see in the graphic on the right.  [Pause]
+
+Changing the paradigm of research is a big undertaking, and it requires a broad approach.
+
+We aim to improve data reuse and research reproducibility at CHOP through technology, including Arcus labs and applied data science, through the use of data archiving and cataloging, and by way of education.  
+
+You can find out more by checking out the Arcus application website (please note, there are some pre-requisites to using the app, such as human subjects protection training and signing our terms of use).  I've added just a very small screenshot of part of what the Arcus application website looks like on the slide on the left side. [Pause].
+
+You can also, without restriction or any prerequisites, look at our Arcus Sharepoint site, which has a calendar of events and lots more information about Arcus.
+
+A little more about me: I work in Arcus Education.  Our role is to support CHOP scientists by helping researchers acquire data science skills.  That's why we have Skills Series like this one!
+
+:::
+
+## Arcus Education
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+![](media/arcus_education_page.png){.bordered}
+:::
+
+
+::: {.column .small-text width="50%"}
+Arcus education provides data science training to researchers ...
+
+(and often this is useful to non-researchers too!).
+
+<https://arcus.chop.edu/i-want-to/arcus-education>
+
+Email us! <arcus-education@chop.edu>
+:::
+:::
+
+::: notes
+
+The Arcus Education team does lots of different kinds of education.  We work one on one with researchers in office hours, we write how-to guides to help people understand how to use Arcus tools, we create asynchronous modules that people can use to acquire skills in their own time, and we do synchronous events like this one.  
+
+Sometimes we focus on Arcus customers, on researchers at CHOP who are doing research within the Arcus data sharing paradigm, and sometimes we broaden our reach to larger audiences, because we know that helping everyone acquire data science skills will help improve the conduct of science at CHOP and help build a data-driven workforce.  
+
+Please check out that page and find out more about some of our services.  You can see I've added a screenshot of that page to the slide here on the left side.  You can also email us at arcus dash education at chop dot edu.
+:::
+
+## Demystifying R and RStudio {.smaller}
+
+Arcus Education provides "Skills Series" for the entire CHOP community.
+
+This Skills Series is a short, 2-session series aimed at Demystifying R and RStudio!
+
+* Session 1: Introduction to R/RStudio
+* Session 2: Introduction to Literate Statistical Programming
+
+::: notes
+
+One of our methods is the Skills Series, and that's what you're in today.
+
+In this series, we're going to take just two sessions to help demystify R and RStudio.  If you have heard people talk about these concepts and you have only a vague idea what they are, and want to know more, without having to actually download anything or write code, this is the right series for you. 
+
+After you finish these two sessions, you'll understand what R is, what RStudio is, why people use these tools, and next steps for learning to use them, if you want.
+
+:::
+
+
+## Session 1 Itinerary {.smaller}
+
+Introduction to R/RStudio 
+
+  * R is a programming language created for statistical data analysis
+  * Why scripts?  Reproducibility and open source data science
+  * RStudio is one way to work with R
+  * Considerations for working with R and RStudio at CHOP
+  * Posit.Cloud
+  
+Goals:
+
+* Be able to describe the difference between R and RStudio
+* Be able to give one advantage for using scripts written in R for data analysis
+* Have a concrete next step for knowing how to get R and RStudio at CHOP
+
+::: notes
+So let's get started with this first session. In this session we're going to cover an introduction to R, RStudio (aka Posit), and R Markdown / Quarto.  
+
+We'll go over what R is, and why people use it.
+
+We'll then talk about why people like to use RStudio to write in R.
+
+We'll discuss ways to use R and RStudio at CHOP, and we'll also talk about an online option called posit dot cloud.
+:::
+
+## R is a Programming Language {.smaller}
+
+R is a programming language.  This is what it looks like:
+
+```{r echo=TRUE, eval=FALSE}
+# Ingest data from REDCap
+arcus_101_feedback_token <- readr::read_file("secrets/quick_arcus_101_feedback_token.txt")
+arcus_101_feedback <- get_data(arcus_101_feedback_token)
+
+# Get raw data and add the labels back in the correct order, show change over time
+arcus_101_feedback_updated <- arcus_101_feedback %>%
+  
+  # We don't need the "completeness" value
+  select(-arcus_101_effectiveness_complete) %>%
+  
+  # Transform all the "knowledge" questions
+  mutate(across(starts_with("knowledge"),
+                ~ factor(.x, levels = c("Very little knowledge", 
+                                      "Some knowledge", 
+                                      "Lots of knowledge", 
+                                      "Expert"))),
+         
+         # Transform all the "opinion" questions (pre)
+         opinion_pre = factor(opinion_pre, 
+                              levels = c("Largely negative, I didn't think Arcus was useful or helpful to CHOP.", 
+                                         "Somewhat negative, I had doubts about how useful or helpful Arcus was to CHOP.", 
+                                         "Neutral, I didn't have a strong opinion.",
+                                         "Somewhat positive, I believed that Arcus was useful or helpful to CHOP.", 
+                                         "Largely positive, I was certain that Arcus was useful or helpful to CHOP.")),
+         
+         # Transform all the "opinion" questions (post)
+         opinion_post = factor(opinion_post, 
+                              levels = c("Largely negative, I don't think Arcus is useful or helpful to CHOP.", 
+                                         "Somewhat negative, I have doubts about how useful or helpful Arcus is to CHOP.", 
+                                         "Neutral, I don't have a strong opinion.",
+                                         "Somewhat positive, I believe that Arcus is useful or helpful to CHOP.", 
+                                         "Largely positive, I am certain that Arcus is useful or helpful to CHOP.")),
+         
+         # Measure change (pre to post)
+         
+         knowledge_change = as.numeric(knowledge_post)-as.numeric(knowledge_pre),
+         opinion_change = as.numeric(opinion_post)-as.numeric(opinion_pre),
+         )
+
+# Make a bar chart showing pre-intervention knowledge
+
+ggplot(arcus_101_feedback_updated) +
+         geom_bar(aes(x=knowledge_pre)) +
+  scale_x_discrete(drop=FALSE) +
+  labs(title = "Knowledge of Arcus Before 101") +
+  xlab("")
+
+# Save this graph for later
+
+ggsave("figures/pre_101_knowledge.png")
+```
+  
+::: notes
+OK, if you've never seen any R language before, here's an example.  This is real R code that we use in my team.  This is just to show you what R looks like, so you get an idea.  Don't worry, there won't be a quiz!
+
+You can see that there are some comments, here shown in grey, that describe what the code is doing.  As I scroll down, you can see what this code does. 
+
+First, we're ingesting some data from REDCap.  It's a survey we give related to a webinar we give twice a month, called Arcus 101.  We want to measure our effectiveness, and we analyze this survey data using R.
+
+So we ingest the data,
+
+In line 9, we get rid of a value we don't need.
+
+Then we do some transformation.  We want to make sure R knows the proper order of our Likert scale values.  We have a set of values that has to do with knowledge, a set of values that has to do with opinion before our talk, and a set of values that has to do with opinion after our talk.
+
+In lines 36 and 37, we do a little math to measure change.
+
+Then we make a data visualization in lines 42 through 46, and in line 50, we save this as a file we can use later.
+
+This is just a snippet of actual code that we use in our team, just in case you've never seen R code before.
+
+:::
+
+## R is a Programming Language  {.smaller}
+
+R is a **statistical** programming language.
+
+* Like other programming languages (Javascript, Python, C++):
+
+  - R has specific syntax rules
+  - R gives error messages that you might have to search online for
+  - R has online communities that can help you learn (Stack Overflow, etc.)
+  
+* Unlike other programming languages:
+
+  - R was written **specifically** for statistical data analysis
+
+::: notes
+If you ever took programming in school, whether that was BASIC or Pascal or C++ or Python, you will have a little bit of an advantage in learning R.  That's because R is a programming language.  Like other programming languages, R has specific syntax rules.  When you make mistakes, which is very very normal,  R will give you error messages that might seem cryptic at first until you get used to them.  Because learning to write a programming language can be hard, there are lots of online communities where people help each other out and ask questions.  R is similar to other programming languages in these ways.
+
+But R is special as a programming language when we're talking about data.  While all programming languages **can** work with data, R was designed specifically for data analysis.  That means that that R is really quite good for data analysis, and it's not good for, say, programming robots. 
+
+:::
+
+## Why Does This Matter? 
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+
+Which is a better tool?
+
+* A multi-tool (like a Swiss Army knife)
+* A mostly mono-task tool (like a cherry pitter)
+
+::: 
+::: {.column .tiny-text width="50%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Stainless_2CR_Multi-tool.jpg/512px-Stainless_2CR_Multi-tool.jpg?20170104132808){.bordered}
+"Stainless 2CR Multi-tool", Santeri Viinamäki, CC BY-SA 4.0, via Wikimedia Commons
+:::
+:::
+
+
+::: notes
+
+There are programming languages that can do lots of stuff reasonably well.  Python is one.  With Python, you can make a website, or program a robot, or analyze data, or make a desktop application, or build an API.  You can get lots of different attachments, or libraries, to make the language more useful.  That's great if you're an experienced programmer and you need to do lots of different things.  It seems like a multi-purpose language would be the best choice for most people, right?
+
+Well, one thing to consider is when you're a beginner. When you're learning something for the first time, it can be a lot easier to learn how to use a tool that mostly just does one thing.  If you're using code to do data analysis, and you're searching online for tutorials, it can be very frustrating to watch a bunch of tutorials that end up being about how to program robots or do other things that you don't care about.  Because R is a very tightly scoped solution to the problem of data analysis, everyone who is posting about R on the internet is interested in data analysis, and you'll have a lot easier time finding answers to your questions about how to use it.
+
+So, to answer the question on this slide... which is better?  It depends!  We think -- and it's just our opinion -- that for people who have to do lots of different things, a multi-tool, a language that has lots of uses, like Python, might be a better fit.  And we suspect that for beginners, a very focused tool like the R language might be a better fit as you get started.
+:::
+
+## Why Not Just Use Excel? {.smaller}
+
+"Why even write code?
+
+Point and click is easier!"
+
+* Excel
+* Point and click statistical analysis software (e.g. SPSS, SAS)
+
+::: notes
+
+Here's a question you might be asking:
+
+Why do people even bother to learn how to write code?  After all, there are software programs out there that allow you to use point and click to analyze your data.  Many people use Excel for day-to-day data analysis, and for scientific-grade statistical analysis, there's always programs like SPSS or SAS or Stata.
+
+And we think that a lot of this depends on how often you're going to do a particular analysis and if you have to share it, and with whom.
+
+If you're going to do something once, or very infrequently, and it's just for you or for a few people, for example, let's say it's your annual budget, just do a spreadsheet in Excel.  No need to write code to do a one-off thing.
+
+However, if you're going to need to repeat your analysis over and over again, or have someone else do it, think about the steps you take.  Will it be hard to describe exactly what cell to put data in, and how to click and drag the values in just the right way?  If there are lots of steps and doing things manually is error prone, hard to describe, or just plain annoying, you might be better off writing a script.
+
+Also, if you're going to be sharing your materials beyond your team, you have to think about cost.  Excel costs, what, maybe $100?  I'm not sure.  But other software like SAS or Matlab or SPSS can cost hundreds or thousands of dollars, and if you are using that software and sharing your files with someone who doesn't have the program, you may be making their life complicated.  One of the great things about R is that it's a free, open source language that people around the world use.  It's very popular and anyone can download and use it for free.
+
+:::
+
+## Scripts {.smaller}
+
+In data analysis, scripts are a series of computer code instructions that handle things like:
+
+* Ingesting data
+* Preparing data
+* Doing descriptive statistics
+* Conducting statistical tests
+* Creating models 
+* Saving interim datasets
+* Creating data visualizations
+* Communicating information
+
+::: notes
+
+Scripts, in this context, are computer code that allow you do do things like:
+
+* Ingesting data: for example, bringing in a .csv file or downloading the latest data from REDCap.
+* Preparing data.  This could be something like removing outliers or combining data from two or more sources.
+* Reporting statistical characteristics.  Maybe you want to find quartiles or median values for your data.
+* Conducting statistical tests.  If you do research, you might need to do something like a two-sample t-tests or measure Cohen's effect size.
+* Creating models.  Maybe you want to create a linear model that would allow you to predict future performance, given what you know from current data.
+* Saving interim datasets.  Perhaps you want to save a deidentified version of data, or a cleaned up version for senior leadership.
+* Creating data visualizations like scatter plots or box plots
+* Communicating information like making a dashboard for leadership or a table for a scientific publication.
+
+R allows you to write a script where you instruct the computer in how to do each step of this process.  
+
+Writing a **script** in a coding language like R is hard, but once it's done, you can have a script that does all the steps of your analysis without having any manual intervention.  That means you can execute it again later (or someone else can), and all that hard work pays off.
+:::
+
+
+## Why Scripts? {.smaller}
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="70%"}
+In science, we've been hearing a lot lately about the "reproducibility crisis".
+
+It's hard to re-do other people's analyses... both for checking their work and for trying it in a new situation.  This is bad for science! 
+
+One of the most important reasons to learn R is to improve the **reproducibility** of your work. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**, which will reduce risk and make "future you" much happier.
+
+::: {.tiny-text}
+Credit: "The Difference", XKCD, CC A-NC 2.5
+
+Joy waiting on permission for cartoon permission for cartoon from https://www.himelblau.com/cartoons/science-and-the-lab... in the meantime...
+:::
+
+::: 
+::: {.column .tiny-text width="30%"}
+![](https://imgs.xkcd.com/comics/the_difference.png)
+:::
+:::
+
+
+::: notes
+
+I'm going to talk about the reproducibility crisis here.  Give me a thumbs up emoji if you're already familiar with this term.  
+
+Now, I know not everyone on this call might work principally in research, so I want to start by saying that one of the important things in science is that we have to repeat experiments to see if we see things happen over and over again. And that's because sometimes we see experimental results that are just coincidences or luck.
+
+If we see that a certain type of therapy reduces anxiety in one study, we want to see that it works again and again.  We want to try it in adolescents, and in adults, and in city kids, and in rural communities, and we'd like to see it work in English speakers and maybe outside of the USA, and in groups with different socio-economic backgrounds, etc.  That's part of how science works.  We repeat experiments.  
+
+We try the same things in different populations.  We want to see if the same drug works similarly in men and in women, and in people of various weights, and different comorbid conditions.  
+
+It's helpful if different scientists in different organizations and in different parts of the world can show that they're seeing the same effects.  It means increasing scientific evidence.
+
+The "reproducibility crisis" refers to the problem in peer-reviewed research in which studies **cannot** be redone, cannot be reproduced, maybe because of insufficient information on how to redo them, or maybe because of preventable problems in the initial research. 
+
+Science usually has a long, multi-step process for gathering and analyzing data, and any multi-step process can be prone to error.  It can be prone to error even when you yourself are doing the exact same analysis three months later when a new batch of data comes in!  And it's even more error prone when someone who isn't you is trying to understand your notes and how you did things.
+
+That's why having an automated script, which handles all of the steps without human intervention, can be really very helpful.  And when we're in an economy where we have to do more with less, doing it for free, without an expensive license, is really useful, especially if you want to share your findings with colleagues in lower-resourced settings.
+
+We'll talk more about reproducibility in the second session of this two-webinar series, where we talk about literate statistical programming, so if this is interesting to you, please come back for the second talk!
+:::
+
+## R Vs RStudio
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+![](media/r_logo.png){.two-thirds}
+
+
+
+:::
+
+::: {.column .small-text width="50%"}
+![](media/rstudio_logo.png){.half}
+
+:::
+
+
+:::
+
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+**R** Programming language for data analysis
+:::
+
+::: {.column .small-text width="50%"}
+**RStudio** Integrated development environment (IDE)
+:::
+
+:::
+
+
+::: notes
+
+Hopefully you understand why sometimes, for at least some people, working with R to write scripts for data analysis makes sense.  It can save time and make their work more reproducible and shareable in the long run.  Now I want to distinguish between two very similar terms.
+
+The first is **R**. R is a statistical programming language that's great for doing data analysis. We've already talked about a few things that make R useful:
+
+-   R was built specifically for statistical data analysis, so it's got a friendly and focused user community and lots of great online resources for learning.
+-   R is **open source**, which means that it is "free" in two ways -- in the meaning of having **no cost** and also in that can be used widely **without intellectual property concerns or licensing restrictions**.
+-   R makes it possible to work with data and build scripts that do lots of things, from ingesting data to building data visualizations.
+
+Then, there's **RStudio**. RStudio was the original name of a company as well as the name of a piece of software the company makes (and makes available in both free and paid versions). A couple of years ago, the company changed its name from RStudio to Posit, but they kept the old name on their software.
+
+You can think of RStudio (the software) as a fancy text editor for writing R code. The technical term for a fancy text editor for writing code is "Integrated Development Environment", or I-D-E. You can run RStudio on Mac, Windows, or Linux. It can run on a local computer like your laptop, or on a server that is accessed using a web browser.
+
+You don't have to use RStudio to write R, but it makes it a lot easier.  Think about typing a paper in Microsoft Word.  You don't need to use Word, necessarily.  If you didn't have Microsoft Word, you could write down your thoughts in Notepad, or in a blank Outlook email, or in the Notes app on your phone.  But Microsoft Word has lots of add-ons, like spell-check and word count and formatting that make it much more pleasant to write a paper there, rather than in the notes app on your phone!
+
+:::
+
+## Using R Alone vs With RStudio
+
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+![](media/r_application.png)
+:::
+::: {.column .small-text width="50%"}
+![](media/rstudio_application.png)
+:::
+:::
+
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+![](media/r_logo.png){width="100px"}
+:::
+
+::: {.column .small-text width="50%"}
+![](media/rstudio_logo.png){width="100px"}
+:::
+
+
+:::
+
+
+::: notes
+
+Now, you can download the R language by itself, and it comes with a little application for writing R code.  It's not a terrible application, but it doesn't have many features.  On the left, you can see what the R application by itself looks like.
+
+Posit is a company that is separate from the people who are in charge of the R language, but they make a fantastic piece of software that we strongly recommend, called RStudio.  It's free, and you can see RStudio on the right.
+
+RStudio has lots of included features that make working in R a lot easier, and most everyone who works in R uses RStudio to write their code.  We highly recommend you use it!  
+
+In the next slide, I'll show you an animation of what working with just plain R looks like, so you can get a baseline feel for what that's like, and then in the following slide I'll show you what it can look like to work with RStudio, so you can appreciate the difference.
+
+:::
+
+## The R App 
+
+![](media/r_app_example.gif)
+
+::: notes
+OK, so here I'm going to run code on the left and it will be executed on the right.  You can execute code using a keyboard shortcut or by using the dropdown menu.  You can see that graphics appear in a separate menu.  And I'm creating a few different graphics.  If I want to see the folder that contains them all, I have to open a new program.  I use a Mac, so in my case that's Finder.  Finally, I can use the Help function, and a separate window opens up.  That's the R app.  It's not terrible, but it's not great, either.
+
+:::
+
+
+## RStudio
+
+![](media/rstudio_app_example.gif)
+
+::: notes
+In RStudio, we can run these bits of code called code chunks here, and we can run them one at a time, or we can run "all chunks above", if we want to just run a lot of code chunks in a row.
+
+We can see the plots in a couple of different places in RStudio, depending on our preferences, and we can see our files listed out right in RStudio, and click on our files to open them and see them in a file viewer.
+
+Help is also located in a pane in the same window, which can be helpful.
+
+I can also take a look at the data I've ingested and get an idea of what my data looks like, and I can also create a report by "rendering" my code and making an HTML report that includes my code, some headers I wrote that describe my code, and shows the graphs I made.  This kind of report creation is a big reason why people use RStudio.  RStudio supports the creation of dashboards and reports that help you not only analyze your data, but communicate what you've discovered to different kinds of audiences effectively.  If you want to learn more about that, come to the next talk in this series, called literate statistical programming.
+
+:::
+
+## RStudio: Runs Lots of Places
+
+::: columns
+::: {.column .small-text width="33%"}
+![](media/posit_logo_2024.png){.two-thirds}
+![](media/rstudio_cloud.png){.two-thirds}
+
+:::
+
+::: {.column .small-text width="33%"}
+![](media/posit_workbench_logo.png){.two-thirds}
+![](media/rstudio_cloud.png){.two-thirds}
+:::
+
+::: {.column .small-text width="33%"}
+![](media/rstudio_desktop.png) 
+
+:::
+:::
+::: columns
+::: {.column .small-text width="33%"}
+**Posit.cloud**
+
+Hosted by Posit (in the cloud)
+:::
+
+::: {.column .small-text width="33%"}
+**Posit Workbench**
+
+Hosted by a company, on prem or in the cloud
+:::
+
+::: {.column .small-text width="33%"}
+**RStudio Desktop**
+
+Installed on your computer
+:::
+:::
+
+::: notes
+There are several versions of RStudio:
+
+**Posit.Cloud** -- a version of the RStudio IDE, also now known as Posit, that can be accessed from a web browser. It's hosted on a server by Posit, the company that makes this software.
+
+**Posit Workbench** -- a version of the RStudio IDE, also now known as Posit, that can be accessed from a web browser. It's hosted on a server, such as on a server your department runs that everyone in your team can access. 
+
+**RStudio Desktop** -- a version of the RStudio IDE that is installed on a personal device like your desktop or laptop. This is what many people at CHOP use, installing it on their CHOP devices or using it on a virtual device like a VDI. 
+
+It's important to note that regardless of which version of RStudio that you use, you will be accessing the same general product.  All of these pretty much look and act the same.  So let's get into what you might need to do at CHOP if you want to work with R.
+
+:::
+
+## Considerations for Working with R at CHOP {.smaller}
+
+* We work with regulated data
+* IRB protocols and other regulations might override what I say here!
+* You can work with R and RStudio on a CHOP device
+  - You will **probably** have to request an install via a [service ticket](https://chop.service-now.com/esc?id=sc_cat_item&sys_id=fbf31958db4efe00de9e782bbf96192c)
+  - You'll need a cost center / grant / project number (even though there's no cost)
+  - Yes, this software has been used at CHOP before
+  - You'll need to give a reason ("I need to analyze data for my job...")
+  - You'll need to [provide the MAC address](https://kb.netgear.com/1005/How-do-I-find-my-device-s-MAC-address) of your computer
+  
+::: notes
+
+First, a few caveats to keep in mind.  At CHOP, we work with sensitive data, whether that's health care data, research data, or trade secrets about our enterprise.  We want to be careful.  Lots of people do work with R and RStudio at CHOP, and you'll almost certainly need to put in a ticket to get the right software installed.  At this point, if you're not already following along in the slides, I'm going to really encourage you to grab this slide link because this slide and the next will have important information that will be useful for you when you decide to work with R and RStudio.
+
+Even though all of these software are free, you'll need a Cost Center (or grant fund) to add to your request.  Get that from your manager, administrative staff, or other leadership within your area.  There will be no charge, but DTS uses this information for tracking resource utilization.  You'll be asked if this is software that's already in use at CHOP -- it certainly is.  You'll be asked to provide a justification, and that's usually that you need this to do data analysis for your job.  And finally, you'll have to provide information about your workstation, including the MAC address of your computer.
+:::
+  
+## What To Get Installed {.smaller}
+
+What I recommend you install / [get installed](https://chop.service-now.com/esc?id=sc_cat_item&sys_id=fbf31958db4efe00de9e782bbf96192c) on your own CHOP device:
+
+* [R](https://lib.stat.cmu.edu/R/CRAN/) -- the language we use to clean, analyze, and visualize data 
+* [RStudio Desktop](https://posit.co/download/rstudio-desktop/) -- an IDE for writing R 
+* [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) -- version control software that will allow you to easily get the latest version of our course materials and will also be helpful for tracking changes in your own projects
+* [GitHub Desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop) -- a helper, or "client" software that makes working with Git easier
+
+
+::: notes
+We've already talked about R and RStudio, but I also highly recommend getting Git and GitHub Desktop installed as well.  They work really well with RStudio, and even if you're not ready to work with version control software now, you might want to work with these programs in the future, so it can be helpful to have everything installed all at once.  Each of these links can take you to more information about installing these programs, which can be helpful for talking to DTS or your boss.
+
+:::
+
+
+## Researchers ONLY at CHOP {.smaller}
+
+(You'll need a **research** cost center to refer to for most of these)
+  
+* If you work with the [High Performance Compute cluster](https://www.research.chop.edu/services/respublica-access-request) (HPC or Respublica), you can request an RStudio session by logging in to [Interactive Apps](https://respublica-web2.research.chop.edu/pun/sys/dashboard/batch_connect/sessions) and choosing RStudio.
+* You can [request a VDI](https://www.research.chop.edu/services/beyondchopedu-access) that includes RStudio.
+* You can [request an Arcus lab](https://support.arcus.chop.edu/servicedesk/customer/portal/6/create/307) for a well-defined research project you're planning.  The Arcus lab includes RStudio.
+
+::: notes
+If you're a researcher at CHOP, there are additional places you might want to use R.  And keep in mind, I work on the research side, so this is what I know best.  If you're on the clinical or operational side of CHOP and there's something about working with R and RStudio on your side that I've omitted, please let me know so I can update the slides!
+
+I won't go into these in detail, but each of these are links that take you to more information.  As a researcher, you can request access to the HPC, also known as Respublica, you can request a VDI, or you can request an Arcus lab. All of these can be ways you can get access to R and RStudio without having to install them on your local computer.  And especially if you work with very big data, or you do complex, high-memory data modeling, you might have to use some of these resources, if your computer just doesn't have enough RAM to do the job.
+
+:::
+
+## Posit.Cloud (be careful!) {.smaller}
+
+You can use R and RStudio using online services like [https://posit.cloud](https://posit.cloud).  
+
+Posit.cloud is a great place for learning or practice with public datasets, BUT is not a safe or compliant place to put your regulated data.
+
+::: notes
+
+When we teach R and RStudio, it can be next to impossible to deal with everyone's different kinds of installation issues while they're trying to get set up and deal with IS, get issues ironed out with their computers and their access permissions, etc. 
+
+That's why we usually have brand new students use Posit.cloud to learn R and RStudio.  Posit.cloud is an online, cloud based service provided by Posit, the company that makes the RStudio software.  It's really good and reliable!  It means that as teachers we can concentrate on our learners really acquiring the skills around R and RStudio, without being bogged down by the fact that some people have Macs, some have PCs, some have admin rights, some don't, some have R installed, some don't, some have a very old version of R and they can't update it, and so on.  It makes things a lot easier for teachers and learners.
+
+HOWEVER!  Posit is absolutely NOT an appropriate place for regulated health care data.  It's for practicing and learning using public datasets.  If you're going to use R for CHOP data, you might benefit from **learning** R and RStudio using Posit.cloud but at the same time start the process of getting R and RStudio installed on your CHOP device so that you can transfer those skills to real-life work right away.  Depending on your operating system and what you already have installed, this might be very smooth, or you might have to troubleshoot this a few times with DTS or RIS, so be prepared to be patient.
+:::
+
+## Was This Effective? {.smaller}
+
+As you can tell from our data analysis, we like to measure our effectiveness.
+
+Goals:
+
+* Be able to describe the difference between R and RStudio
+* Be able to give one advantage for using scripts written in R for data analysis
+* Have a concrete next step for knowing how to get R and RStudio at CHOP
+
+
+::: notes
+We're a group that likes to measure our effectiveness and make changes based on what we learn.  So before we do questions and answers, we like to make sure to give our learners a poll to see if we made a good use of your time.  We're going to ask if we were effective in reaching our goals today, and those goals are on the screen in order to help you answer that question.  Once you answer that poll, feel free to type a question into chat or come off mute and ask to clarify anything I can explain a bit better.
+
+:::
+
+
+## Homework {.smaller}
+
+If you want, totally optional additional learning:
+
+| Module       | Description       | Duration |
+|--------------|---------------|----|
+| [Learning to Learn Data Science](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/learning_to_learn/learning_to_learn.md#1) | Discover how learning data science is different than learning other subjects.| 20 mins |
+| [Reproducibility, Generalizability, and Reuse](https://liascript.github.io/course/?https://raw.githubusercontent.com/arcus/education_modules/main/reproducibility/reproducibility.md#1) | This module provides learners with an approachable introduction to the concepts and impact of research reproducibility, generalizability, and data reuse, and how technical approaches can help make these goals more attainable. | 60 min |
+
+::: notes
+
+OK, as we get close to the end, I know that for some people, this topic ignited a bit of excitement about the ideas around learning how to code or learning more about reproducibility.  If that's you, we have a couple of resources here that you might enjoy, but you absolutely do not have to use these to be able to enjoy and profit from the next session of this series.  
+::::
+
+## Next Session
+
+Literate Statistical Programming (DATES HERE)
+
+  * Review of R and RStudio
+  * Literate programming is a programming paradigm
+  * Research reproducibility reminders
+  * Quarto documents
+  * Next steps
+  
+::: notes
+Finally, if you want to attend the next talk in this two-webinar series, we'll be talking about Literate Statistical Programming, and here are some of the topics we'll talk about next time.  
+
+Thanks so much for your time today, and have a great rest of your day!
+
+:::
+
+
+:::
