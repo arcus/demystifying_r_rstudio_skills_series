@@ -16,7 +16,7 @@ Material in later sessions does build on work done in earlier sessions, but don'
 
   * R is a programming language created for statistical data analysis
   * Why scripts?  Reproducibility and open source data science
-  * RStudio is one (of many possible) ways to work with R
+  * RStudio is one way to work with R
   * Considerations for working with R and RStudio at CHOP
   * Posit.Cloud
 
