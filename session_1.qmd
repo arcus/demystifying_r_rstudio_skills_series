@@ -268,7 +268,10 @@ So, to answer the question on this slide... which is better?  It depends!  We th
 
 ## Why Not Just Use Excel? {.smaller}
 
-"Why even write code? Point and click is easier!"
+::: {.columns .v-center-container}
+::: {.column .small-text width="50%"}
+
+"Why even write code? Point and click is so much easier!"
 
 These can be useful:
 
@@ -281,6 +284,17 @@ But they can also be:
 * Costly
 
 One potential answer?  **Scripts!**
+::: 
+
+::: {.column .small-text width="50%"}
+![](media/himelblog_excel.png)
+
+::: {.small-text}
+Used with permission by Ed Himelblau. See his work or subscribe to his newsletter at <https://www.himelblau.com/>
+:::
+:::
+
+:::
 
 ::: notes
 
@@ -292,7 +306,7 @@ And we think that a lot of this depends on how often you're going to do a partic
 
 If you're going to do something once, or very infrequently, and it's just for you or for a few people, for example, let's say it's your annual budget, just do a spreadsheet in Excel.  No need to write code to do a one-off thing.
 
-However, if you're going to need to repeat your analysis over and over again, or have someone else do it, think about the steps you take.  Will it be hard to describe exactly what cell to put data in, and how to click and drag the values in just the right way?  If there are lots of steps and doing things manually is error prone, hard to describe, or just plain annoying, you might be better off writing a script.
+However, if you're going to need to repeat your analysis over and over again, or have someone else do it, think about the steps you take.  Will it be hard to describe exactly what cell to put data in, and how to click and drag the values in just the right way?  If there are lots of steps and doing things manually is error prone, hard to describe, or just plain annoying, you might not actually write down your steps.  You might think, "I'll remember this", or "It'll be obvious to me later."  Spoiler alert: it might not be!  In a case of lots of steps, you might be better off writing a script.
 
 Also, if you're going to be sharing your materials beyond your team, you have to think about cost.  Excel costs, what, maybe $100?  I'm not sure.  But other software like SAS or Matlab or SPSS can cost hundreds or thousands of dollars, and if you are using that software and sharing your files with someone who doesn't have the program, you may be making their life complicated.  One of the great things about R is that it's a free, open source language that people around the world use.  It's very popular and anyone can download and use it for free.
 
@@ -333,22 +347,21 @@ Writing a **script** in a coding language like R is hard, but once it's done, yo
 ## Why Scripts? {.smaller}
 
 ::: {.columns .v-center-container}
-::: {.column .small-text width="70%"}
-In science, we've been hearing a lot lately about the "reproducibility crisis".
+::: {.column .small-text width="60%"}
+In science, we've been hearing a lot about the "reproducibility crisis".
 
 It's hard to re-do other people's analyses... both for checking their work and for trying it in a new situation.  This is bad for science! 
 
 One of the most important reasons to learn R is to improve the **reproducibility** of your work. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce **reproducible data analyses**, which will reduce risk and make "future you" much happier.
 
-::: {.tiny-text}
-Credit: "The Difference", XKCD, CC A-NC 2.5
+::: 
+::: {.column .small-text width="40%"}
+![](media/himelblog_protocol.png)
 
-Joy waiting on permission for cartoon permission for cartoon from https://www.himelblau.com/cartoons/science-and-the-lab... in the meantime...
+:::{.small-text}
+Used with permission by Ed Himelblau. See his work or subscribe to his newsletter at <https://www.himelblau.com/>
 :::
 
-::: 
-::: {.column .tiny-text width="30%"}
-![](https://imgs.xkcd.com/comics/the_difference.png)
 :::
 :::
 
@@ -367,7 +380,9 @@ It's helpful if different scientists in different organizations and in different
 
 The "reproducibility crisis" refers to the problem in peer-reviewed research in which studies **cannot** be redone, cannot be reproduced, maybe because of insufficient information on how to redo them, or maybe because of preventable problems in the initial research. 
 
-Science usually has a long, multi-step process for gathering and analyzing data, and any multi-step process can be prone to error.  It can be prone to error even when you yourself are doing the exact same analysis three months later when a new batch of data comes in!  And it's even more error prone when someone who isn't you is trying to understand your notes and how you did things.
+Science usually has a long, multi-step process for gathering and analyzing data, and any multi-step process can be prone to error.  It can be prone to error even when you yourself are doing the exact same analysis three months later when a new batch of data comes in!  And it's even more error prone when someone who isn't you is trying to understand your notes and how you did things.  
+
+The cartoon on the right, which is by biologist and New Yorker cartoonist Ed Himelblau, shows scientists doing some very complex rituals as part of trying to reproduce an experiment.  I know the caption is quite small, so I'll read it.  It says, "Do you ever wonder if every step in the protocol is absolutely necessary?"
 
 That's why having an automated script, which handles all of the steps without human intervention, can be really very helpful.  And now that we're facing an economy where we have to do more with less, the ability to automate things for free, without an expensive license, is really useful, especially if you want to share your findings with colleagues in lower-resourced settings.
 

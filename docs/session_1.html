@@ -675,7 +675,9 @@
 </section>
 <section id="why-not-just-use-excel" class="slide level2 smaller">
 <h2>Why Not Just Use Excel?</h2>
-<p>“Why even write code? Point and click is easier!”</p>
+<div class="columns v-center-container">
+<div class="column small-text" style="width:50%;">
+<p>“Why even write code? Point and click is so much easier!”</p>
 <p>These can be useful:</p>
 <ul>
 <li>Excel</li>
@@ -687,12 +689,18 @@
 <li>Costly</li>
 </ul>
 <p>One potential answer? <strong>Scripts!</strong></p>
+</div><div class="column small-text" style="width:50%;">
+<p><img data-src="media/himelblog_excel.png"></p>
+<div class="small-text">
+<p>Used with permission by Ed Himelblau. See his work or subscribe to his newsletter at <a href="https://www.himelblau.com/" class="uri">https://www.himelblau.com/</a></p>
+</div>
+</div></div>
 <aside class="notes">
 <p>Here’s a question you might be asking:</p>
 <p>Why do people even bother to learn how to write code to analyze data? After all, there are software programs out there that allow you to use point and click to analyze your data. Many people use Excel for day-to-day data analysis, and for scientific-grade statistical analysis, there’s always programs like SPSS or SAS or Stata.</p>
 <p>And we think that a lot of this depends on how often you’re going to do a particular analysis and if you have to share it, and with whom.</p>
 <p>If you’re going to do something once, or very infrequently, and it’s just for you or for a few people, for example, let’s say it’s your annual budget, just do a spreadsheet in Excel. No need to write code to do a one-off thing.</p>
-<p>However, if you’re going to need to repeat your analysis over and over again, or have someone else do it, think about the steps you take. Will it be hard to describe exactly what cell to put data in, and how to click and drag the values in just the right way? If there are lots of steps and doing things manually is error prone, hard to describe, or just plain annoying, you might be better off writing a script.</p>
+<p>However, if you’re going to need to repeat your analysis over and over again, or have someone else do it, think about the steps you take. Will it be hard to describe exactly what cell to put data in, and how to click and drag the values in just the right way? If there are lots of steps and doing things manually is error prone, hard to describe, or just plain annoying, you might not actually write down your steps. You might think, “I’ll remember this”, or “It’ll be obvious to me later.” Spoiler alert: it might not be! In a case of lots of steps, you might be better off writing a script.</p>
 <p>Also, if you’re going to be sharing your materials beyond your team, you have to think about cost. Excel costs, what, maybe $100? I’m not sure. But other software like SAS or Matlab or SPSS can cost hundreds or thousands of dollars, and if you are using that software and sharing your files with someone who doesn’t have the program, you may be making their life complicated. One of the great things about R is that it’s a free, open source language that people around the world use. It’s very popular and anyone can download and use it for free.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -748,16 +756,15 @@
 <section id="why-scripts" class="slide level2 smaller">
 <h2>Why Scripts?</h2>
 <div class="columns v-center-container">
-<div class="column small-text" style="width:70%;">
-<p>In science, we’ve been hearing a lot lately about the “reproducibility crisis”.</p>
+<div class="column small-text" style="width:60%;">
+<p>In science, we’ve been hearing a lot about the “reproducibility crisis”.</p>
 <p>It’s hard to re-do other people’s analyses… both for checking their work and for trying it in a new situation. This is bad for science!</p>
 <p>One of the most important reasons to learn R is to improve the <strong>reproducibility</strong> of your work. One of the most powerful aspects of working in the R environment is that it makes it straightforward to produce <strong>reproducible data analyses</strong>, which will reduce risk and make “future you” much happier.</p>
-<div class="tiny-text">
-<p>Credit: “The Difference”, XKCD, CC A-NC 2.5</p>
-<p>Joy waiting on permission for cartoon permission for cartoon from https://www.himelblau.com/cartoons/science-and-the-lab… in the meantime…</p>
+</div><div class="column small-text" style="width:40%;">
+<p><img data-src="media/himelblog_protocol.png"></p>
+<div class="small-text">
+<p>Used with permission by Ed Himelblau. See his work or subscribe to his newsletter at <a href="https://www.himelblau.com/" class="uri">https://www.himelblau.com/</a></p>
 </div>
-</div><div class="column tiny-text" style="width:30%;">
-<p><img data-src="https://imgs.xkcd.com/comics/the_difference.png"></p>
 </div></div>
 <aside class="notes">
 <p>I’m going to talk about the reproducibility crisis here. Give me a thumbs up emoji if you’re already familiar with this term.</p>
@@ -767,6 +774,7 @@
 <p>It’s helpful if different scientists in different organizations and in different parts of the world can show that they’re seeing the same effects. It means increasing scientific evidence.</p>
 <p>The “reproducibility crisis” refers to the problem in peer-reviewed research in which studies <strong>cannot</strong> be redone, cannot be reproduced, maybe because of insufficient information on how to redo them, or maybe because of preventable problems in the initial research.</p>
 <p>Science usually has a long, multi-step process for gathering and analyzing data, and any multi-step process can be prone to error. It can be prone to error even when you yourself are doing the exact same analysis three months later when a new batch of data comes in! And it’s even more error prone when someone who isn’t you is trying to understand your notes and how you did things.</p>
+<p>The cartoon on the right, which is by biologist and New Yorker cartoonist Ed Himelblau, shows scientists doing some very complex rituals as part of trying to reproduce an experiment. I know the caption is quite small, so I’ll read it. It says, “Do you ever wonder if every step in the protocol is absolutely necessary?”</p>
 <p>That’s why having an automated script, which handles all of the steps without human intervention, can be really very helpful. And now that we’re facing an economy where we have to do more with less, the ability to automate things for free, without an expensive license, is really useful, especially if you want to share your findings with colleagues in lower-resourced settings.</p>
 <p>We’ll talk more about reproducibility in the second session of this two-webinar series, where we talk about literate statistical programming, so if this is interesting to you, please come back for the second talk!</p>
 <style type="text/css">
