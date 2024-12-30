@@ -12,21 +12,37 @@ The series will cover why and how to get started using the R statistical program
 
 Material in later sessions does build on work done in earlier sessions, but don't let missing a session keep you away from attending later sessions.  We try to overlap material to help keep everyone caught up!
 
-- **Session 1: Introduction to R/RStudio**
+**Session 1: Introduction to R/RStudio**
 
-  * R is a programming language created for statistical data analysis
-  * Why scripts?  Reproducibility and open source data science
-  * RStudio is one way to work with R
-  * Considerations for working with R and RStudio at CHOP
-  * Posit.Cloud
+Content:
 
-- **Session 2: Literate Statistical Programming**
+* R is a programming language created for statistical data analysis
+* Why scripts?  Reproducibility and open source data science
+* RStudio is one way to work with R
+* Considerations for working with R and RStudio at CHOP
+* Posit.Cloud
 
-  * Review of R and RStudio
-  * Literate programming is a programming paradigm
-  * Research reproducibility reminders
-  * Quarto documents
-  * Next steps
+Goals:
+
+* Be able to describe the difference between R and RStudio
+* Be able to give one advantage for using scripts written in R for data analysis
+* Have a concrete next step for knowing how to get R and RStudio at CHOP
+
+**Session 2: Literate Statistical Programming**
+
+Content:
+
+* Review of R and RStudio
+* Literate programming is a programming paradigm
+* Research reproducibility reminders
+* Quarto documents
+* Next steps
+
+Goals:
+
+* Describe what makes programming "literate"
+* Explain the real-life consequence of irreproducible research
+* Name one way Quarto documents can be helpful in data analysis
 
 ## License
 

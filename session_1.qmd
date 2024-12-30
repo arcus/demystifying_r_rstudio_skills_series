@@ -107,7 +107,7 @@ One of our methods in Education is the Skills Series, and that's what you're in 
 
 In this series, we're going to take just two sessions to help demystify R and RStudio.  If you have heard people talk about these concepts and you have only a vague idea what they are, and want to know more, without having to actually download anything or write code, at least not yet, this is the right series for you. 
 
-After you finish these two sessions, you'll understand what R is, what RStudio is, why people use these tools, and next steps for getting access to them, if you want.
+After you finish these two sessions, you'll understand what R is, what RStudio is, why people use these tools, and next steps for getting access to them and using them, if you want.
 
 :::
 
@@ -653,6 +653,20 @@ If you want, totally optional additional learning:
 
 OK, as we get close to the end, I know that for some people, this topic ignited a bit of excitement about the ideas around learning how to code or learning more about reproducibility.  If that's you, we have a couple of resources here that you might enjoy, but you absolutely do not have to use these to be able to enjoy and profit from the next session of this series.  
 ::::
+
+## Acknowledgements {.smaller}
+
+* R User Group leadership, especially Stephan Kadauke
+* Former learners at CHOP, Penn, Drexel, University of Botswana
+* DART study participants and pilots around the world
+* Ed Himelblau
+* You!
+
+::: notes
+
+We want to thank the people that contributed to this work.  R User group leaders, especially Stephen [shte-fan] Kadauke [cud-awk-ey] created some of the materials that we started with years ago that have changed over time to take on this current format.  We're grateful to all the students at CHOP and beyond who have taken R workshops and given us valuable feedback that has improved our approach, especially our DART study participants.  We really enjoy the humor and science of Ed Himelblau and are grateful for his generosity in supporting our work with his art.  And, of course, thank you, our participants today! 
+
+:::
 
 ## Next Session
 

@@ -25,7 +25,7 @@
     "href": "session_1.html#demystifying-r-and-rstudio",
     "title": "",
     "section": "Demystifying R and RStudio",
-    "text": "Demystifying R and RStudio\nArcus Education provides “Skills Series” for the entire CHOP community.\nThis Skills Series is a short, 2-session series aimed at Demystifying R and RStudio!\n\nSession 1: Introduction to R/RStudio\nSession 2: Introduction to Literate Statistical Programming\n\n\nOne of our methods in Education is the Skills Series, and that’s what you’re in today.\nIn this series, we’re going to take just two sessions to help demystify R and RStudio. If you have heard people talk about these concepts and you have only a vague idea what they are, and want to know more, without having to actually download anything or write code, at least not yet, this is the right series for you.\nAfter you finish these two sessions, you’ll understand what R is, what RStudio is, why people use these tools, and next steps for getting access to them, if you want."
+    "text": "Demystifying R and RStudio\nArcus Education provides “Skills Series” for the entire CHOP community.\nThis Skills Series is a short, 2-session series aimed at Demystifying R and RStudio!\n\nSession 1: Introduction to R/RStudio\nSession 2: Introduction to Literate Statistical Programming\n\n\nOne of our methods in Education is the Skills Series, and that’s what you’re in today.\nIn this series, we’re going to take just two sessions to help demystify R and RStudio. If you have heard people talk about these concepts and you have only a vague idea what they are, and want to know more, without having to actually download anything or write code, at least not yet, this is the right series for you.\nAfter you finish these two sessions, you’ll understand what R is, what RStudio is, why people use these tools, and next steps for getting access to them and using them, if you want."
   },
   {
     "objectID": "session_1.html#session-1-itinerary",
@@ -418,5 +418,12 @@
     "title": "",
     "section": "R at CHOP",
     "text": "R at CHOP\n\nJoin the CHOP R User Group\nCheck out some asynchrounous modules\nWe will have some upcoming Skills Series related to R: Join the CHOP R User Group to be the first to find out the dates!\n\n\nAnd as promised, a few links here. You can join the CHOP R User Group and check out some asynchronous modules my team built, which you can use to learn R in small bits of time, like on your lunch break. Additionally, we plan to have additional Skills Series like this one. This Skills Series was a short one of only two sessions, but our next one will be entitled “First Steps in R and RStudio”, and will be 6 sessions in length and will help you get started writing code for the first time. Keep your eyes open for an announcement about that in the R User Group or on the Arcus Sharepoint page!"
+  },
+  {
+    "objectID": "session_1.html#acknowledgements",
+    "href": "session_1.html#acknowledgements",
+    "title": "",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\nR User Group leadership, especially Stephan Kadauke\nFormer learners at CHOP, Penn, Drexel, University of Botswana\nDART study participants and pilots around the world\nEd Himelblau\nYou!\n\n\nWe want to thank the people that contributed to this work. R User group leaders, especially Stephen [shte-fan] Kadauke [cud-awk-ey] created some of the materials that we started with years ago that have changed over time to take on this current format. We’re grateful to all the students at CHOP and beyond who have taken R workshops and given us valuable feedback that has improved our approach, especially our DART study participants. We really enjoy the humor and science of Ed Himelblau and are grateful for his generosity in supporting our work with his art. And, of course, thank you, our participants today!"
   }
 ]
