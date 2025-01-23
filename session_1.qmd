@@ -126,7 +126,7 @@ Goals:
 
 * Be able to describe the difference between R and RStudio
 * Be able to give one advantage for using scripts written in R for data analysis
-* Have a concrete next step for knowing how to get R and RStudio at CHOP
+* Have a concrete next step for obtaining access to R and RStudio at CHOP
 
 ::: notes
 So let's get started with this first session. In this session we're going to cover an introduction to R and RStudio.
@@ -630,7 +630,7 @@ Goals:
 
 * Be able to describe the difference between R and RStudio
 * Be able to give one advantage for using scripts written in R for data analysis
-* Have a concrete next step for knowing how to get R and RStudio at CHOP
+* Have a concrete next step for obtaining access to R and RStudio at CHOP
 
 
 ::: notes

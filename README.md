@@ -14,6 +14,10 @@ Material in later sessions does build on work done in earlier sessions, but don'
 
 **Session 1: Introduction to R/RStudio**
 
+[**Tuesday, February 11, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/00f9b136-11f7-4cf7-a423-832feae58543@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+[**Friday, February 28, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/d2151116-0066-4566-b91d-56ef4937ab59@a6112416-07b0-41a5-9bb1-d146b575c975)
+
 Content:
 
 * R is a programming language created for statistical data analysis
@@ -26,9 +30,13 @@ Goals:
 
 * Be able to describe the difference between R and RStudio
 * Be able to give one advantage for using scripts written in R for data analysis
-* Have a concrete next step for knowing how to get R and RStudio at CHOP
+* Have a concrete next step for obtaining access to R and RStudio at CHOP
 
 **Session 2: Literate Statistical Programming**
+
+[**Friday, March 7, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/5d078fad-e471-4d61-89c1-02a9eae3c93d@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+[**Tuesday, March 11, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/900599ed-282e-45b0-a2c7-e87fcc6c2c39@a6112416-07b0-41a5-9bb1-d146b575c975)
 
 Content:
 
