@@ -32,6 +32,11 @@ Goals:
 * Be able to give one advantage for using scripts written in R for data analysis
 * Have a concrete next step for obtaining access to R and RStudio at CHOP
 
+**Session Materials** 
+
+- Watch a recording: pending live presentation, stay tuned!
+- Review the [session 1 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_1.html)
+
 **Session 2: Literate Statistical Programming**
 
 [**Friday, March 7, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/5d078fad-e471-4d61-89c1-02a9eae3c93d@a6112416-07b0-41a5-9bb1-d146b575c975)
@@ -51,6 +56,11 @@ Goals:
 * Describe what makes programming "literate"
 * Explain the real-life consequence of irreproducible research
 * Name one way Quarto documents can be helpful in data analysis
+
+**Session Materials** 
+
+- Watch a recording: pending live presentation, stay tuned!
+- Review the [session 2 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_2.html)
 
 ## License
 
