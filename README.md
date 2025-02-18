@@ -34,7 +34,7 @@ Goals:
 
 **Session Materials** 
 
-- Watch a recording: pending live presentation, stay tuned!
+- Watch a recording: [February 11, 2025](https://www.youtube.com/watch?v=ECYd7eipSeg)
 - Review the [session 1 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_1.html)
 
 **Session 2: Literate Statistical Programming**
