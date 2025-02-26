@@ -393,9 +393,21 @@ To make an output document, you click a button in RStudio. The button might say 
 ::: notes
 If what you've learned today, and possibly in the first session, has inspired you to want to learn to write R code and to use RStudio to do that, there are lots of ways to do that.
 
-First, do get access to R and RStudio so you can use these tools.
+First, do get access to R and RStudio so you can use these tools.  
 
-Second, learn to use R! We have some offerings, but we're certainly not the only game in town. How do you like to learn? Are you motivated by grades, and you really thrive in a class setting? Many universities offer courses in R, often related to things like biostatistics or public health. Do you like videos and short-form courses that you get a certificate for? Coursera and other massive open online course providers have great R courses, which again can sometimes be related to a specific interest, like Bayesian statistics or data visualization. Do you prefer books? There are some great books out there, especially ones by people like Hadley Wickham and Garrett Grolemund. In the next few slide we'll have some links for CHOP-based resources, but please know that there's a wealth of other stuff out there that you may also really enjoy.
+Posit.cloud is an online service that has a generous free tier and will allow you to practice your R and RStudio skills without downloading anything -- but you should never use this for real work data.
+
+Or, you can get software installed on your CHOP device.  We'll share some slides about how to do that in just a few moments.
+
+Second, learn to use R! 
+
+We strongly suggest starting by learning about working in tabular data using the tidyverse.  Even if your eventual goal is to do genomics or computer vision or machine learning in R, starting with tabular data analysis using the tidyverse set of packages will help establish good habits and give you a good foundation.
+
+Also, we want to re-assert that while RStudio is optional, it is highly, highly recommended.  You should learn within the context of using RStudio software, because it has a lot of helpful scaffolding that will make your experience less frustrating.
+
+Now, where should you go to learn R skills?
+
+My team has some offerings here at CHOP, but we're certainly not the only game in town. How do you like to learn? Are you motivated by grades, and you really thrive in a class setting? Many universities offer courses in R, often related to things like biostatistics or public health. Do you like videos and short-form courses that you get a certificate for? Coursera and other massive open online course providers have great R courses, which again can sometimes be related to a specific interest, like Bayesian statistics or data visualization. Do you prefer books? There are some great books out there, especially ones by people like Hadley Wickham and Garrett Grolemund. In the next few slide we'll have some links for CHOP-based resources, but please know that there's a wealth of other stuff out there that you may also really enjoy.
 
 CHOP has also had an R user group for a number of years, and we encourage you to join it! There's a mailing list as well as a Slack workspace that people use to communicate, share successes, ask questions, and get advice.
 
@@ -412,17 +424,17 @@ And finally, writing code is hard! But your whole job is hard, or at least it wa
 -   Slide titled [Posit.Cloud (be careful!)](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_1.html#/posit.cloud-be-careful)
 
 ::: notes
-There are some detailed slides we went over in the first session of this series, and I'm just going to give those links here. Please check these out, these have helpful links!
+There are some detailed slides we went over in the first session of this series, and I'm just going to give those links here. Please check these out, these have helpful links!  The first two slides are general purpose and describe how to get R, RStudio, Git, and GitHub installed.  The third slide is of particular use if you work in Research, and the fourth talks about Posit.cloud.
 :::
 
 ## R at CHOP
 
 -   Join the [CHOP R User Group](https://bit.ly/chopRusers)
--   Check out some [asynchrounous modules](https://arcus.github.io/education_modules/example_pathways#pathway-4-analysis-in-r)
--   We will have some upcoming Skills Series related to R: Join the CHOP R User Group to be the first to find out the dates!
+-   Check out some [asynchronous modules](https://arcus.github.io/education_modules/example_pathways#pathway-4-analysis-in-r)
+-   We will have some upcoming Skills Series related to R: Join the CHOP R User Group or keep your eyes on the [Arcus Sharepoint page](https://chop365.sharepoint.com/sites/Arcus) to be the first to find out the dates!
 
 ::: notes
-And as promised, a few links here. You can join the CHOP R User Group and check out some asynchronous modules my team built, which you can use to learn R in small bits of time, like on your lunch break. Additionally, we plan to have additional Skills Series like this one. This Skills Series was a short one of only two sessions, but our next one will be entitled "First Steps in R and RStudio", and will be 6 sessions in length and will help you get started writing code for the first time. Keep your eyes open for an announcement about that in the R User Group or on the Arcus Sharepoint page!
+And as promised, a few links here. You can join the CHOP R User Group.  You may also want to check out some asynchronous modules my team built, which you can use to learn R in small bits of time, like on your lunch break. Additionally, we plan to have additional Skills Series like this one. This Skills Series was a short one of only two sessions, but our next one will be entitled "First Steps in R and RStudio", and will be 6 sessions in length and will help you get started writing code for the first time. Keep your eyes open for an announcement about that in the R User Group or on the [rcus Sharepoint page!
 :::
 
 ## Q&A / Was This Effective? {.smaller}
