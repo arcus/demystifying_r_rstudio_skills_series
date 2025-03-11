@@ -427,14 +427,42 @@ And finally, writing code is hard! But your whole job is hard, or at least it wa
 There are some detailed slides we went over in the first session of this series, and I'm just going to give those links here. Please check these out, these have helpful links!  The first two slides are general purpose and describe how to get R, RStudio, Git, and GitHub installed.  The third slide is of particular use if you work in Research, and the fourth talks about Posit.cloud.
 :::
 
-## R at CHOP
+## First Steps in R and RStudio {.smaller}
+
+Five Mondays at 1 pm, April and First Monday in May:
+
+[Session 1: Review and Setup](https://events.teams.microsoft.com/event/bace0175-7da3-4bd6-a526-0495948f2e2f@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+[Session 2: Projects and File Ingestion](https://events.teams.microsoft.com/event/3a548b37-8d92-4928-b93a-bbafd8e6bce5@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+[Session 3: Exploring Data Visually Using ggplot2](https://events.teams.microsoft.com/event/2fcffab3-3afc-4c87-aa57-db819936ebad@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+[Session 4: Selecting Data Using dplyr](https://events.teams.microsoft.com/event/ce0570f3-db39-4881-a6a3-b1bb8593d299@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+[Session 5: Putting it All Together: Communicating](https://events.teams.microsoft.com/event/00b29f05-7b22-4e91-96fd-c4de27dd1a54@a6112416-07b0-41a5-9bb1-d146b575c975)
+
+::: notes
+
+If you've enjoyed this two-session series demystifying R and RStudio, you might benefit from a five-session series that will walk you through your first steps in using R and RStudio.  We're offering that in April and May!
+
+Signups for this webinar series are on your screen. 
+
+A little bit about the scope of this Skills Series:
+
+This series is intended to be a gentle introduction to using R and RStudio for people who interact with data and want to work in the R statistical programming language. This course is geared towards beginners who are comfortable doing basic tasks with data that comes in rows and columns (for example, organizing data in Excel) but have no programming background.
+
+The workshop will cover how to get started using the R statistical programming language in your work. We'll talk about how to import data, transform data, and create data visualizations in R. To keep this workshop series short, our scope is limited, and we won't go into details that are specific to the conduct of research, like modeling and statistical tests. For that, we are planning a future Skills Series we're going to call Next Steps in R for Research. 
+:::
+
+## More R at CHOP
 
 -   Join the [CHOP R User Group](https://bit.ly/chopRusers)
 -   Check out some [asynchronous modules](https://arcus.github.io/education_modules/example_pathways#pathway-4-analysis-in-r)
--   We will have some upcoming Skills Series related to R: Join the CHOP R User Group or keep your eyes on the [Arcus Sharepoint page](https://chop365.sharepoint.com/sites/Arcus) to be the first to find out the dates!
+-   We offer periodic sessions: Join the CHOP R User Group or keep your eyes on the [Arcus Sharepoint page](https://chop365.sharepoint.com/sites/Arcus) to be the first to find out the dates!
 
 ::: notes
-And as promised, a few links here. You can join the CHOP R User Group.  You may also want to check out some asynchronous modules my team built, which you can use to learn R in small bits of time, like on your lunch break. Additionally, we plan to have additional Skills Series like this one. This Skills Series was a short one of only two sessions, but our next one will be entitled "First Steps in R and RStudio", and will be 6 sessions in length and will help you get started writing code for the first time. Keep your eyes open for an announcement about that in the R User Group or on the [rcus Sharepoint page!
+And as promised, a few links here. You can join the CHOP R User Group.  You may also want to check out some asynchronous modules my team built, which you can use to learn R in small bits of time, like on your lunch break. Additionally, we plan to have additional Skills Series like this one. I've already talked about "First Steps in R and RStudio", but keep your eyes open for other announcements too, either in the R User Group or on the [rcus Sharepoint page!
+
 :::
 
 ## Q&A / Was This Effective? {.smaller}

@@ -39,9 +39,10 @@ Goals:
 
 **Session 2: Literate Statistical Programming**
 
-[**Friday, March 7, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/5d078fad-e471-4d61-89c1-02a9eae3c93d@a6112416-07b0-41a5-9bb1-d146b575c975)
 
 [**Tuesday, March 11, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/900599ed-282e-45b0-a2c7-e87fcc6c2c39@a6112416-07b0-41a5-9bb1-d146b575c975)
+[**Friday, March 14, 2025 at 1 pm** sign up link](https://events.teams.microsoft.com/event/db4eae87-3d9d-4be4-b59c-69df50389769@a6112416-07b0-41a5-9bb1-d146b575c975)
+
 
 Content:
 
