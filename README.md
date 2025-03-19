@@ -41,6 +41,7 @@ Goals:
 
 
 [**Tuesday, March 11, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/900599ed-282e-45b0-a2c7-e87fcc6c2c39@a6112416-07b0-41a5-9bb1-d146b575c975)
+
 [**Friday, March 14, 2025 at 1 pm** sign up link](https://events.teams.microsoft.com/event/db4eae87-3d9d-4be4-b59c-69df50389769@a6112416-07b0-41a5-9bb1-d146b575c975)
 
 
@@ -60,7 +61,7 @@ Goals:
 
 **Session Materials** 
 
-- Watch a recording: pending live presentation, stay tuned!
+- Watch a [recording](https://www.youtube.com/watch?v=tb_WZrvT0sE&feature=youtu.be)
 - Review the [session 2 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_2.html)
 
 ## License
