@@ -313,5 +313,33 @@
     "title": "",
     "section": "Next Session",
     "text": "Next Session\nLiterate Statistical Programming\nFriday, March 7, 2025 at 12 pm sign up link\nTuesday, March 11, 2025 at 12 pm sign up link\n\nReview of R and RStudio\nLiterate programming is a programming paradigm\nResearch reproducibility reminders\nQuarto documents\nNext steps\n\n\nFinally, if you want to attend the next talk in this two-webinar series, we’ll be talking about Literate Statistical Programming, and here are some of the topics we’ll talk about next time.\nThanks so much for your time today, and have a great rest of your day!\n\n\n\n\n\nArcus Education, Children’s Hospital of Philadelphia"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Demystifying R and RStudio Skills Series",
+    "section": "",
+    "text": "This is the GitHub repository for the workshop series called Demystifying R and RStudio, given at the Children’s Hospital of Philadelphia (CHOP) by Arcus Education."
+  },
+  {
+    "objectID": "index.html#about-this-workshop-series",
+    "href": "index.html#about-this-workshop-series",
+    "title": "Demystifying R and RStudio Skills Series",
+    "section": "About This Workshop Series",
+    "text": "About This Workshop Series\nWelcome to Demystifying R and RStudio!\nThis series is intended to be a gentle introduction to R and RStudio for people who interact with data and want to work in the R statistical programming language (or just understand what it is and why it matters). This course is geared towards beginners who are comfortable doing basic tasks with data that comes in rows and columns (for example, organizing data in Excel) but have no programming background.\nThe series will cover why and how to get started using the R statistical programming language in your work. We’ll talk the definition of R (a programming language), RStudio (a software environment useful for working with the R language), how to access and use these tools, and next steps for learning how to use them. What we won’t do is show you how to get started writing code or analyzing data using R. So if you just want to get an overall idea of what R and RStudio are all about, without actually doing hands-on coding, this is the perfect workshop series for you!"
+  },
+  {
+    "objectID": "index.html#workshop-sessions",
+    "href": "index.html#workshop-sessions",
+    "title": "Demystifying R and RStudio Skills Series",
+    "section": "Workshop Sessions",
+    "text": "Workshop Sessions\nMaterial in later sessions does build on work done in earlier sessions, but don’t let missing a session keep you away from attending later sessions. We try to overlap material to help keep everyone caught up!\nSession 1: Introduction to R/RStudio\nTuesday, February 11, 2025 at 12 pm sign up link\nFriday, February 28, 2025 at 12 pm sign up link\nContent:\n\nR is a programming language created for statistical data analysis\nWhy scripts? Reproducibility and open source data science\nRStudio is one way to work with R\nConsiderations for working with R and RStudio at CHOP\nPosit.Cloud\n\nGoals:\n\nBe able to describe the difference between R and RStudio\nBe able to give one advantage for using scripts written in R for data analysis\nHave a concrete next step for obtaining access to R and RStudio at CHOP\n\nSession Materials\n\nWatch a recording: February 11, 2025\nReview the session 1 slides\n\nSession 2: Literate Statistical Programming\nTuesday, March 11, 2025 at 12 pm sign up link\nFriday, March 14, 2025 at 1 pm sign up link\nContent:\n\nReview of R and RStudio\nLiterate programming is a programming paradigm\nResearch reproducibility reminders\nQuarto documents\nNext steps\n\nGoals:\n\nDescribe what makes programming “literate”\nExplain the real-life consequence of irreproducible research\nName one way Quarto documents can be helpful in data analysis\n\nSession Materials\n\nWatch a recording\nReview the session 2 slides"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Demystifying R and RStudio Skills Series",
+    "section": "License",
+    "text": "License\nAll of the material in this GitHub repository is copyrighted under the Creative Commons BY-SA 4.0 copyright to make the material easy to reuse. We encourage you to reuse it and adapt it for your own teaching as you like!"
   }
 ]
