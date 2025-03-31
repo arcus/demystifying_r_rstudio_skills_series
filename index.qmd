@@ -4,8 +4,6 @@ format: html
 editor: visual
 ---
 
-This is the GitHub repository for the workshop series called **Demystifying R and RStudio**, given at the Children's Hospital of Philadelphia (CHOP) by Arcus Education.
-
 ## About This Workshop Series
 
 Welcome to Demystifying R and RStudio! 
@@ -14,7 +12,19 @@ This series is intended to be a gentle introduction to R and RStudio for people 
  
 The series will cover why and how to get started using the R statistical programming language in your work. We'll talk the definition of R (a programming language), RStudio (a software environment useful for working with the R language), how to access and use these tools, and next steps for learning how to use them.  What we won't do is show you how to get started writing code or analyzing data using R.  So if you just want to get an overall idea of what R and RStudio are all about, without actually doing hands-on coding, this is the perfect workshop series for you!
 
-## Workshop Sessions
+**Session 1 Materials** 
+
+- Watch a [recording](https://www.youtube.com/watch?v=ECYd7eipSeg)
+- Review the [session 1 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_1.html)
+
+**Session 2 Materials** 
+
+- Watch a [recording](https://www.youtube.com/watch?v=tb_WZrvT0sE&feature=youtu.be)
+- Review the [session 2 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_2.html)
+
+## Workshop Sessions 
+
+**(Note: These are in the past, stay tuned for future programming!)**
 
 Material in later sessions does build on work done in earlier sessions, but don't let missing a session keep you away from attending later sessions.  We try to overlap material to help keep everyone caught up!
 
@@ -45,11 +55,9 @@ Goals:
 
 **Session 2: Literate Statistical Programming**
 
-
 [**Tuesday, March 11, 2025 at 12 pm** sign up link](https://events.teams.microsoft.com/event/900599ed-282e-45b0-a2c7-e87fcc6c2c39@a6112416-07b0-41a5-9bb1-d146b575c975)
 
 [**Friday, March 14, 2025 at 1 pm** sign up link](https://events.teams.microsoft.com/event/db4eae87-3d9d-4be4-b59c-69df50389769@a6112416-07b0-41a5-9bb1-d146b575c975)
-
 
 Content:
 
@@ -70,7 +78,8 @@ Goals:
 - Watch a [recording](https://www.youtube.com/watch?v=tb_WZrvT0sE&feature=youtu.be)
 - Review the [session 2 slides](https://arcus.github.io/demystifying_r_rstudio_skills_series/session_2.html)
 
+
 ## License
 
-All of the material in this GitHub repository is copyrighted under the [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) copyright to make the material easy to reuse. 
+All of the material in the [GitHub repository](https://github.com/arcus/demystifying_r_rstudio_skills_series) for the workshop series called **Demystifying R and RStudio**, given at the Children's Hospital of Philadelphia (CHOP) by Arcus Education is copyrighted under the [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) copyright to make the material easy to reuse. 
 We encourage you to reuse it and adapt it for your own teaching as you like!
